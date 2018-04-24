@@ -7,6 +7,10 @@ import javax.swing.JFrame;  // handles cursor and window interactions
 
 public class App extends JFrame
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	// constants
 	public final int WINDOW_HEIGHT = 500;
 	public final int WINDOW_WIDTH = 1000;
@@ -17,7 +21,7 @@ public class App extends JFrame
 	 * @pre: none
 	 * @param: none
 	 * @return: none
-	 * @post: the application window is constructed
+	 * @post: App Constructed
 	 */
 	public App()
 	{
@@ -25,7 +29,7 @@ public class App extends JFrame
 	}
 	
 	/**
-	 * Creates a window of a specified size
+	 * Creates UI Win
 	 * @pre: none
 	 * @param: none
 	 * @return: none
@@ -43,7 +47,7 @@ public class App extends JFrame
     }    
     
 	/**
-	 * Controls the flow of the code for the game
+	 * Controls Game Flow
 	 * @pre: none
 	 * @param: none
 	 * @return: none
