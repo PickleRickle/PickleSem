@@ -12,7 +12,7 @@ public class GrapeBul extends SprMain
     
     private void initMissile() {
         
-        loadImage("src/resources/worm_spr");  
+        loadImage("src/resources/grape_spr");  
         getImageDimensions();
     }
 
