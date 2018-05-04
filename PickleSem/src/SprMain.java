@@ -2,6 +2,7 @@
  * Controls sprites for objects with collision events
  */
 import java.awt.Image;
+import java.util.Iterator;
 import javax.swing.ImageIcon;
 import java.awt.Rectangle;
 import java.util.ArrayList;
@@ -9,7 +10,7 @@ import java.util.ArrayList;
 public class SprMain 
 {
 	//constants
-	protected int x;
+    protected int x;
     protected int y;
     protected int w;
     protected int h;
@@ -17,6 +18,7 @@ public class SprMain
     protected boolean vis; // true if visible
     protected Image img;
     protected ArrayList<Image> frames;
+    protected Iterator it;
 
     /**
 	 * Constructor
@@ -30,6 +32,8 @@ public class SprMain
         this.x = x;
         this.y = y;
         vis = true;
+	frames = new ArrayList<Image> ();
+	it = frames.Iterator();
     }
     
     /**
