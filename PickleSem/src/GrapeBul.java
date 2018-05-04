@@ -1,22 +1,36 @@
+import java.awt.Image;
+import javax.swing.ImageIcon;
 
 public class GrapeBul extends SprMain
 {
-	private final int BRD_W = 390;
-    private final int GRP_SPD = 2;
+	private final Integer BRD_W = 10000;
+    private final Double GRP_SPD = 5.0;
 
+    /**
+     * @param x
+     * @param y
+     */
     public GrapeBul(int x, int y) 
     {
         super(x, y);
-        initMissile();
+        makeGrapes();
     }
     
-    private void initMissile() {
+    /**
+     * initializes grapes
+     */
+    private void makeGrapes() 
+    {
         
-        loadImage("src/resources/worm_spr");  
+        loadImage("src/resources/grape_spr.png");  
         getImageDimensions();
     }
 
-    public void move() {
+    /**
+     * moves grape bullets
+     */
+    public void move() 
+    {
         
         x += GRP_SPD;
         
@@ -24,5 +38,16 @@ public class GrapeBul extends SprMain
         {
             vis = false;
         }
+    }
+    
+    /**
+     * @return img
+     */
+    public Image getImage()
+    {
+    	ImageIcon i = new ImageIcon("src/resources/grape_spr.png");
+    	img = i.getImage();
+    	
+    	return img;
     }
 }

@@ -1,6 +1,10 @@
+/**
+ * Controls sprites for objects with collision events
+ */
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import java.awt.Rectangle;
+import java.util.ArrayList;
 
 public class SprMain 
 {
@@ -9,8 +13,10 @@ public class SprMain
     protected int y;
     protected int w;
     protected int h;
-    protected boolean vis;
+    protected Integer speed;
+    protected boolean vis; // true if visible
     protected Image img;
+    protected ArrayList<Image> frames;
 
     /**
 	 * Constructor
@@ -27,50 +33,86 @@ public class SprMain
     }
     
     /**
+     * Loads the object's sprite
      * @pre: none
      * @param: imageName
      * @return: none
      * @post: none
      */
-    protected void loadImage(String imageName) 
+    public void loadImage(String imageName) 
     {
-
         ImageIcon i = new ImageIcon(imageName);
         img = i.getImage();
-    }
+    } // end of loadImage method
     
+    /**
+     * 
+     */
     protected void getImageDimensions() 
     {
-
         w = img.getWidth(null);
         h = img.getHeight(null);
     }    
 
+    /**
+     * @return
+     */
     public Image getImg() 
     {
         return img;
     }
 
+    /**
+     * @return
+     */
+    public int getW()
+    {
+    	return img.getWidth(null); 
+    } // end of getW
+    
+    /**
+     * @return
+     */
+    public int getH()
+    {
+    	return img.getHeight(null);
+    } // end of getH
+    
+    /**
+     * @return
+     */
     public int getX() 
     {
         return x;
     }
 
+    /**
+     * @return
+     */
     public int getY() 
     {
         return y;
     }
 
+    /**
+     * @return
+     */
     public boolean isVis() 
     {
         return vis;
     }
 
-    public void setVis(Boolean vis) 
+    /**
+     * @param vis
+     */
+    public void setVis(boolean vis) 
     {
         this.vis = vis;
     }
     
+    /**
+     * @return
+     */
     public Rectangle getBnds() 
     {
         return new Rectangle(x, y, w, h);
