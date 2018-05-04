@@ -178,7 +178,7 @@ public class GameWindow extends JPanel implements ActionListener
     {
 
         String endMes = "GG";
-        Font font = new Font("Helvetica", Font.BOLD, 14);
+        Font font = new Font("Helvetica", Font.BOLD, 44);
         FontMetrics fm = getFontMetrics(font);
 
         g.setColor(Color.white);
