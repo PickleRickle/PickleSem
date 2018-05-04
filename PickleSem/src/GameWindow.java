@@ -32,7 +32,7 @@ public class GameWindow extends JPanel implements ActionListener
 	private Timer tmr;
 	
 	private Duck duck;
-	private SprMain sky, ground;
+	private SprMain sky, ground, house;
 	private List <GrndEnemy> worms;
 	
 	private boolean ingame;
@@ -44,7 +44,7 @@ public class GameWindow extends JPanel implements ActionListener
 	private int duckStrtY = 200;
 	
 	private final int DELAY = 15;
-	private final int[][] pos = {{-1500, duckStrtY}};
+	private final int[][] pos = {{-1500, duckStrtY}, {-1800, duckStrtY}};
 	
 	/*private final int[][] pos = {{2380, duckStrtY}, {2500, duckStrtY}, {1380, duckStrtY}, {780, duckStrtY}, {580, duckStrtY}, {680, duckStrtY}, 
 	{790, duckStrtY}, {760, duckStrtY}, {790, duckStrtY}, {980, duckStrtY}, {560, duckStrtY}, {510, duckStrtY}, {930, duckStrtY}, 
@@ -90,6 +90,9 @@ public class GameWindow extends JPanel implements ActionListener
         
         ground = new Environment(0, 336);
         ground.loadImage("src/Resources/ground_spr.png");
+        
+        //house = new Environment(0, duckStrtY-125);
+        //house.loadImage("src/Resources/house_spr.png");
     	
     	duckStrtX = winW * 3 / 4;
 
@@ -102,7 +105,7 @@ public class GameWindow extends JPanel implements ActionListener
     }// end of initBoard method
     
     /**
-     * initalizes the list of enemies, creates new ones
+     * initializes the list of enemies, creates new ones
      */
     public void makeEnms()
     {
@@ -146,6 +149,7 @@ public class GameWindow extends JPanel implements ActionListener
         	g.drawImage(sky.getImg(), sky.getX(), sky.getY(), this);
         	g.drawImage(ground.getImg(), ground.getX(), ground.getY(), this);
             g.drawImage(duck.getImage(), duck.getX(), duck.getY(), this);
+            //g.drawImage(house.getImg(), house.getX(), house.getY(), this);
         }
 
         List <GrapeBul> grps = duck.getGrape();
