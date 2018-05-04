@@ -85,10 +85,10 @@ public class GameWindow extends JPanel implements ActionListener
 
         setPreferredSize(new Dimension(winW, winH));
         
-        sky = new SprMain(0, 0);
+        sky = new Environment(0, 0);
         sky.loadImage("src/Resources/sky_spr.png");
         
-        ground = new SprMain(0, 336);
+        ground = new Environment(0, 336);
         ground.loadImage("src/Resources/ground_spr.png");
     	
     	duckStrtX = winW * 3 / 4;
