@@ -323,7 +323,7 @@ public class GameWindow extends JPanel implements ActionListener
                 {
                     
                     worm.setVis(false);
-                    duck.setVis(false);
+                    grp.setVis(false);
                 }
             }
         }
