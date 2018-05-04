@@ -27,6 +27,7 @@ public class Duck extends SprMain
 
     public void move() 
     {
+    	System.out.println("moving");
 
         x += dx;
         y += dy;
@@ -54,16 +55,19 @@ public class Duck extends SprMain
 
         while(key == KeyEvent.VK_SPACE) 
         {
+        	System.out.println("shoot");
             fire();
         }
 
         while(key == KeyEvent.VK_A) 
         {
+        	System.out.println("left");
             dx = -1;
         }
 
         while(key == KeyEvent.VK_D) 
         {
+        	System.out.println("right");
             dx = 1;
         }
 /*
@@ -86,6 +90,7 @@ public class Duck extends SprMain
 
     public void keyReleased(KeyEvent e) 
     {
+    	System.out.println();
 
         int key = e.getKeyCode();
 
