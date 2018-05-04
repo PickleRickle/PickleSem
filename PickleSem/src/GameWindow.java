@@ -201,7 +201,7 @@ public class GameWindow extends JPanel implements ActionListener
         updGrapes();
         updWorms();
 
-        checkCollisions();
+        collCheck();
 
         repaint();
     }
@@ -288,7 +288,7 @@ public class GameWindow extends JPanel implements ActionListener
     /**
      * checks for the colliding of objects
      */
-    public void checkCollisions() 
+    public void collCheck() 
     {
 
         Rectangle r3 = duck.getBnds();
