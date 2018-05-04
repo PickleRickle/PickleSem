@@ -16,9 +16,14 @@ import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.Timer;
+import java.awt.event.KeyEvent;
+import java.util.Scanner;
 
 public class GameWindow extends JPanel implements ActionListener
 {
+	private int k;
+	private Scanner inKey;
+	
 	private static final long serialVersionUID = -3595680454898980105L;
 	private Timer tmr;
 	
@@ -67,7 +72,7 @@ public class GameWindow extends JPanel implements ActionListener
      */
     private void initWin() 
     {        
-    	//addKeyListener(new KeyListener());
+    	addKeyListener(new AdpT());
         setFocusable(true);
         setBackground(Color.BLACK);
         
@@ -190,7 +195,6 @@ public class GameWindow extends JPanel implements ActionListener
 
         if (duck.isVis()) 
         {
-            
             duck.move();
         }
     }
@@ -284,8 +288,8 @@ public class GameWindow extends JPanel implements ActionListener
             }
         }
     }
-
-    private class adpT extends KeyAdapter 
+    
+    private class AdpT extends KeyAdapter 
     {
 
         @Override
