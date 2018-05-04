@@ -91,8 +91,8 @@ public class GameWindow extends JPanel implements ActionListener
         ground = new Environment(0, 336);
         ground.loadImage("src/Resources/ground_spr.png");
         
-        //house = new Environment(0, duckStrtY-125);
-        //house.loadImage("src/Resources/house_spr.png");
+        house = new Environment(0, duckStrtY-125);
+        house.loadImage("src/Resources/house_spr.png");
     	
     	duckStrtX = winW * 3 / 4;
 
@@ -149,7 +149,7 @@ public class GameWindow extends JPanel implements ActionListener
         	g.drawImage(sky.getImg(), sky.getX(), sky.getY(), this);
         	g.drawImage(ground.getImg(), ground.getX(), ground.getY(), this);
             g.drawImage(duck.getImage(), duck.getX(), duck.getY(), this);
-            //g.drawImage(house.getImg(), house.getX(), house.getY(), this);
+            g.drawImage(house.getImg(), house.getX(), house.getY(), this);
         }
 
         List <GrapeBul> grps = duck.getGrape();
