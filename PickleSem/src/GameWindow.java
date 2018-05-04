@@ -33,7 +33,7 @@ public class GameWindow extends JPanel implements ActionListener
 	
 	private Duck duck;
 	private SprMain sky, ground;
-	private List <Enemy> worms;
+	private List <GrndEnemy> worms;
 	
 	private boolean ingame;
 	
@@ -110,7 +110,7 @@ public class GameWindow extends JPanel implements ActionListener
     	
     	for (int[] x : pos)
     	{
-    		worms.add(new Enemy(-x[0], x[1]));
+    		worms.add(new GrndEnemy(-x[0], x[1]));
     	}
     }
     
@@ -158,7 +158,7 @@ public class GameWindow extends JPanel implements ActionListener
             }
         }
 
-        for (Enemy worm : worms) 
+        for (GrndEnemy worm : worms) 
         {
             if (worm.isVis()) 
             {
@@ -271,7 +271,7 @@ public class GameWindow extends JPanel implements ActionListener
         for (int i = 0; i < worms.size(); i++) 
         {
 
-            Enemy wrm = worms.get(i);
+            GrndEnemy wrm = worms.get(i);
             
             if (wrm.isVis()) 
             {
@@ -293,7 +293,7 @@ public class GameWindow extends JPanel implements ActionListener
 
         Rectangle r3 = duck.getBnds();
 
-        for (Enemy worm : worms) 
+        for (GrndEnemy worm : worms) 
         {
             
             Rectangle r2 = worm.getBnds();
@@ -314,7 +314,7 @@ public class GameWindow extends JPanel implements ActionListener
 
             Rectangle r1 = grp.getBnds();
 
-            for (Enemy worm : worms) 
+            for (GrndEnemy worm : worms) 
             {
 
                 Rectangle r2 = worm.getBnds();

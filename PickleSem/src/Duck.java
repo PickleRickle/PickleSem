@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.ImageIcon;
 
-public class Duck extends SprMain implements Character
+public class Duck extends Player
 {
 	private int dx;
     private int dy;

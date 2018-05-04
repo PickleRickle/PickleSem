@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class SprMain 
 {
 	//constants
-    protected int x;
+	protected int x;
     protected int y;
     protected int w;
     protected int h;
@@ -32,8 +32,8 @@ public class SprMain
         this.x = x;
         this.y = y;
         vis = true;
-	frames = new ArrayList<Image> ();
-	it = frames.Iterator();
+        frames = new ArrayList<Image>();
+        it = frames.iterator();
     }
     
     /**

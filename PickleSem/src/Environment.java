@@ -5,5 +5,4 @@ public class Environment extends SprMain
 	{
 		super(x, y);
 	}
-
 }
