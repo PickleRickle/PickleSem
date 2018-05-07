@@ -45,6 +45,9 @@ public class Duck extends Player
     /**
      * Pickle is moved on the screen
      * @pre: none
+     * @param: none
+     * @return: none
+     * @post: location updated
      */
     public void walk() 
     {
@@ -54,24 +57,32 @@ public class Duck extends Player
         if (0 >= x) 
         {
             x = 1;
-        }
+        } // end of if
 
         if (y <= 0) 
         {
             y = 1;
-        }
-    }
+        } // end of if
+    } // end of walk
 
     /**
-     * @return grapes
+     * Returns list of grapes
+     * @pre: none
+     * @param: none
+     * @return: List<GrapeBul>
+     * @post: none
      */
     public List<GrapeBul> getGrape() 
     {
         return grapes;
-    }
+    } // end of getGrape
 
     /**
-     * @param k
+     * Controls key commands
+     * @pre: none
+     * @param: KeyEvent
+     * @return: none
+     * @post: rate of change of location updated
      */
     public void keyPress(KeyEvent k) 
     {
@@ -79,43 +90,51 @@ public class Duck extends Player
         int key = k.getKeyCode();
 
         
-        if(!(!(key == KeyEvent.VK_SPACE))) 
+        if(!(key != KeyEvent.VK_SPACE)) 
         {
             fire();
-        }
+        } // end of if
 
         if(key == KeyEvent.VK_A) 
         {
             dx = -5;
-        }
+        } // end of if
 
         if(key == KeyEvent.VK_D) 
         {
             dx = 5;
-        }
+        } // end of if
 /*
         if(key == KeyEvent.VK_W) 
         {
             dy = -1;
-        }
+        } // end of if
 
         if(key == KeyEvent.VK_S) 
         {
             dy = 1;
-        }
+        } // end of if
 */
     }
 
     /**
      * adds grapes to list to be launched, fires grapes
+     * @pre: none
+     * @param: none
+     * @return: none
+     * @post: grapes appended
      */
     public void fire() 
     {
         grapes.add(new GrapeBul(x + w, y + h/2));
-    }
+    } // end of fire
 
     /**
-     * @param e
+     * Stops movement once key released
+     * @pre: none
+     * @param KeyEvent
+     * @return: none
+     * @post: movement stopped
      */
     public void keyReleased(KeyEvent e) 
     {
@@ -124,26 +143,30 @@ public class Duck extends Player
         if (key == KeyEvent.VK_A) 
         {
             dx = 0;
-        }
+        } // end of if
 
         if (key == KeyEvent.VK_D) 
         {
             dx = 0;
-        }
+        } // end of if
 
         if (key == KeyEvent.VK_W) 
         {
             dy = 0;
-        }
+        } // end of if
 
         if (key == KeyEvent.VK_S) 
         {
             dy = 0;
-        }        
-    }
+        } // end of if     
+    } // end of keyReleased
     
-    /* (non-Javadoc)
-     * @see Character#getImage()
+    /**
+     * Returns sprite
+     * @pre: none
+     * @param: none
+     * @return: Image
+     * @post: none
      */
     public Image getImage()
     {
@@ -151,5 +174,5 @@ public class Duck extends Player
     	img = i.getImage();
     	
     	return img;
-    }
+    } // end of getImage
 } // end of Duck

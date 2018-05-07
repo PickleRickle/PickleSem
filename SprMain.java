@@ -5,6 +5,8 @@ import java.awt.Image;
 import java.util.Iterator;
 import javax.swing.ImageIcon;
 import java.awt.Rectangle;
+import java.awt.image.ImageObserver;
+import java.awt.Graphics;
 import java.util.ArrayList;
 
 public class SprMain 
@@ -145,6 +147,22 @@ public class SprMain
     {
         this.vis = vis;
     } // end of setVis
+    
+    /**
+     * Cycles through the sprite's frames
+     * @pre: none
+     * @param: Graphics
+     * @return: none
+     * @post: none
+     */
+    public void cycle(Graphics g)
+    {
+    	while(it.hasNext())
+    	{
+    		Image i = it.next();
+    		g.drawImage(i, getX(), getY(), (ImageObserver) this);
+    	} // end of while
+    } // end of cycle
     
     /**
      * Returns bounding box of object
